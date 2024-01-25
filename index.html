@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time ToDo List with Firebase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        h1 {
+
+            color: #333;
+        }
+
+        #todoInput {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 13px;
+            border: none;
+
+        }
+
+        #addData,
+        #deleteAll {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #addData:hover,
+        #deleteAll:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+
+        }
+
+        li:hover {
+            transform: scale(1.02);
+        }
+
+        li button {
+            padding: 8px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        li button.editBtn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        li button.editBtn:hover {
+            background-color: #0b7dda;
+        }
+
+        li button.deleteBtn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        li button.deleteBtn:hover {
+            background-color: #da190b;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 500px;
+            width: 500px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: start;
+        }
+
+        .buttons>button {
+            width: 80%;
+            border: 2px solid red;
+        }
+
+        .design {
+            background-color: rgb(169, 160, 160);
+            padding: 20px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container design">
+        <h1>TODO APP</h1>
+
+        <input type="text" id="todoInput">
+        <div class="buttons">
+            <button id="addData">Add ToDo</button>
+            <button id="deleteAll">Delete All</button>
+        </div>
+        <ul id="blogList" class="container"></ul>
+    </div>
+
+    <script type="module" src="./code.js"></script>
+</body>
+
+</html>
